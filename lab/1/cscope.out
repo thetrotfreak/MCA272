@@ -1,0 +1,1352 @@
+cscope 15 $HOME/dev/mca/2/java/lab/1 -q 0000000077 0000006311
+	@Boss.java
+
+1 
+public
+ cÏs 
+	cBoss
+ 
+ex‹nds
+ 
+	mMÚ¡”
+
+
+3 
+´iv©e
+ 
+	mmagicPošts
+;
+
+5 
+	$Boss
+ ()
+
+7 
+	`su³r
+ ("Boss", 1
+_00_000
+, 1_00_000);
+
+8 
+this
+.
+magicPošts
+ = 10
+_000
+;
+
+11 
+	$Boss
+ (
+magicPošts
+)
+
+13 
+	`su³r
+ ("Boss", 1
+_00_000
+, 1_00_000);
+
+14 
+this
+.
+magicPošts
+ = magicPoints;
+
+15 
+	}
+}
+
+17 
+public
+ 
+SŒšg
+ 
+	$ÿ¡S³Î
+ (è{  
+this
+.
+Çme
+ + " i ÿ¡šg‡ s³Î"; 
+	}
+}
+
+19 
+public
+ 
+SŒšg
+
+
+20 
+	$ÿ¡S³Î
+ (
+SŒšg
+ 
+¥–lName
+)
+
+22  
+this
+.
+Çme
+ + " i ÿ¡šgh" + 
+¥–lName
+ + " spell";
+
+23 
+	}
+}
+
+	@Hero.java
+
+1 
+public
+ cÏs 
+	cH”o
+ 
+ex‹nds
+ 
+	mPÏy”
+
+
+4 
+´iv©e
+ 
+	mmagicPošts
+;
+
+6 
+	$H”o
+ ()
+
+8 
+	`su³r
+ ("H”o", 1
+_00_000
+, 1_00_000, "Magic Sword");
+
+9 
+this
+.
+ÇgicPošts
+ = 1000;
+
+12 
+	$H”o
+ (
+magicPošts
+è{ 
+this
+.magicPošt ğ10
+_000
+; 
+	}
+}
+
+	@ISaveable.java
+
+1 
+impÜt
+ 
+	gjava
+.
+	gut
+.
+	gLi¡
+;
+
+3 
+š‹rçû
+ 
+	gISav—bË
+
+
+6 
+	gLi¡
+<
+	gSŒšg
+> 
+wr™e
+ ();
+
+8 
+»ad
+ (
+Li¡
+<
+SŒšg
+> 
+li¡
+);
+
+	@Magic.java
+
+1 
+public
+ cÏs 
+	cMagic
+
+
+3 
+´Ùeùed
+ 
+SŒšg
+ 
+	maffš™y
+;
+
+5 
+	$Magic
+ (
+SŒšg
+ 
+affš™y
+è{ 
+this
+.affinity =‡ffinity; }
+
+7 @
+Ov”ride
+
+
+8 
+public
+ 
+SŒšg
+
+
+9 
+	$toSŒšg
+ ()
+
+11  "Magiøaffš™y i " + 
+this
+.
+affš™y
+;
+
+12 
+	}
+}
+
+14 
+public
+ cÏs 
+	cMagicD‘as
+
+
+16 
+´iv©e
+ 
+SŒšg
+ 
+	gd‘as
+;
+
+18 
+MagicD‘as
+ (
+SŒšg
+ 
+d‘as
+è{ 
+	gthis
+.
+	gd‘as
+ = details; }
+
+20 @
+Ov”ride
+
+
+21 
+public
+ 
+SŒšg
+
+
+22 
+toSŒšg
+ ()
+
+24  
+	gthis
+.
+	gd‘as
+;
+
+	@Main.java
+
+1 
+public
+ cÏs 
+	cMaš
+
+
+3 
+public
+ 
+
+4 
+	$maš
+ (
+SŒšg
+[] 
+¬gs
+)
+
+7 
+Magic
+ 
+magic
+ = 
+Ãw
+ 
+	`Magic
+ ("Water");
+
+8 
+Sy¡em
+.
+out
+.
+	`´šn
+ (
+magic
+);
+
+11 
+Magic
+.
+MagicD‘as
+ 
+magicD‘as
+ = 
+magic
+.
+Ãw
+ 
+	`MagicD‘as
+ (
+
+13 
+Sy¡em
+.
+out
+.
+	`´šn
+ (
+magicD‘as
+);
+
+16 
+PÏy”
+ 
+PÏy”OÃ
+ = 
+Ãw
+ 
+	`PÏy”
+ ("Alice", 150, 120, "Sword");
+
+17 
+Sy¡em
+.
+out
+.
+	`´šn
+ (
+PÏy”OÃ
+);
+
+20 
+PÏy”OÃ
+.
+	`addToPÏy”Hi¡Üy
+ ("Player joinedhe game.");
+
+21 
+PÏy”OÃ
+.
+	`addToPÏy”Hi¡Üy
+ ("Player defeated‡ monster.");
+
+22 
+Sy¡em
+.
+out
+.
+	`´šn
+ (
+PÏy”OÃ
+.
+	`g‘PÏy”Hi¡Üy
+ ());
+
+25 
+PÏy”
+.
+PÏy”Sts
+ 
+¶ay”Sts
+ = 
+PÏy”OÃ
+.
+	`g‘PÏy”Sts
+ ();
+
+26 
+¶ay”Sts
+.
+	`upd©ePÏy”Sts
+ ();
+
+27 
+Sy¡em
+.
+out
+.
+	`´šn
+ (
+¶ay”Sts
+);
+
+29 
+	}
+}
+
+	@Monster.java
+
+1 
+public
+ cÏs 
+	cMÚ¡”
+
+
+3 
+´Ùeùed
+ 
+SŒšg
+ 
+	mÇme
+;
+
+4 
+´Ùeùed
+ 
+	mh™Pošts
+;
+
+5 
+´Ùeùed
+ 
+	m¡»ngth
+;
+
+6 
+´Ùeùed
+ 
+Magic
+ 
+	mmagic
+;
+
+8 
+public
+ 
+	$MÚ¡”
+ ()
+
+10 
+this
+.
+magic
+ = 
+Ãw
+ 
+	`Magic
+ ("Earth");
+
+11 
+this
+.
+h™Pošts
+ = 1000;
+
+12 
+this
+.
+¡»ngth
+ = 1000;
+
+15 
+public
+ 
+	$MÚ¡”
+ (
+SŒšg
+ 
+Çme
+, 
+h™Pošts
+, 
+¡»ngth
+)
+
+17 
+this
+.
+magic
+ = 
+Ãw
+ 
+	`Magic
+ ("Earth");
+
+18 
+this
+.
+Çme
+ =‚ame;
+
+19 
+this
+.
+h™Pošts
+ = hitPoints;
+
+20 
+this
+.
+¡»ngth
+ = strength;
+
+21 
+	}
+}
+
+23 
+public
+ 
+SŒšg
+
+
+24 
+	$g‘Name
+ ()
+
+26  
+Çme
+;
+
+27 
+	}
+}
+
+29 
+public
+ 
+
+30 
+	$g‘H™Pošts
+ ()
+
+32  
+h™Pošts
+;
+
+33 
+	}
+}
+
+35 
+public
+ 
+
+36 
+	$g‘SŒ’gth
+ ()
+
+38  
+¡»ngth
+;
+
+39 
+	}
+}
+
+41 @
+Ov”ride
+
+
+42 
+public
+ 
+SŒšg
+
+
+43 
+	$toSŒšg
+ ()
+
+45  "MÚ¡”{Çme=\'" + 
+this
+.
+Çme
+ + "\', h™Pošts=" +his.
+h™Pošts
+
+
+46 + ", sŒ’gth=" + 
+this
+.
+¡»ngth
+ + ", " +his.
+magic
+ + "}";
+
+47 
+	}
+}
+
+	@Player.java
+
+1 
+public
+ cÏs 
+	cPÏy”
+
+
+3 
+´iv©e
+ 
+SŒšg
+ 
+	mÇme
+;
+
+4 
+´iv©e
+ 
+SŒšg
+ 
+	mw—pÚ
+;
+
+5 
+´iv©e
+ 
+	mh™Pošts
+;
+
+6 
+´iv©e
+ 
+	m¡»ngth
+;
+
+7 
+´iv©e
+ 
+fš®
+ 
+boŞ—n
+ 
+	mMORTAL
+ = 
+Œue
+;
+
+8 
+´iv©e
+ 
+SŒšgBufãr
+ 
+	m¶ay”Hi¡Üy
+;
+
+9 
+´iv©e
+ 
+PÏy”Sts
+ 
+	m¶ay”Sts
+;
+
+11 
+public
+ 
+	$PÏy”
+ ()
+
+13 
+this
+.
+h™Pošts
+ = 100;
+
+14 
+this
+.
+¡»ngth
+ = 100;
+
+15 
+this
+.
+¶ay”Hi¡Üy
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+ ();
+
+16 
+this
+.
+¶ay”Sts
+ = 
+Ãw
+ 
+	`PÏy”Sts
+ ();
+
+19 
+public
+ 
+	$PÏy”
+ (
+SŒšg
+ 
+Çme
+, 
+h™Pošts
+, 
+¡»ngth
+)
+
+21 
+this
+.
+Çme
+ =‚ame;
+
+22 
+this
+.
+h™Pošts
+ = hitPoints;
+
+23 
+this
+.
+¡»ngth
+ = strength;
+
+24 
+this
+.
+w—pÚ
+ = "Bare hands";
+
+25 
+this
+.
+¶ay”Hi¡Üy
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+ ();
+
+26 
+this
+.
+¶ay”Sts
+ = 
+Ãw
+ 
+	`PÏy”Sts
+ ();
+
+27 
+	}
+}
+
+29 
+public
+ 
+	$PÏy”
+ (
+SŒšg
+ 
+Çme
+, 
+h™Pošts
+, 
+¡»ngth
+, SŒšg 
+w—pÚ
+)
+
+32 
+this
+.
+Çme
+ =‚ame;
+
+33 
+this
+.
+h™Pošts
+ = hitPoints;
+
+34 
+this
+.
+¡»ngth
+ = strength;
+
+35 
+this
+.
+w—pÚ
+ = weapon;
+
+36 
+this
+.
+¶ay”Hi¡Üy
+ = 
+Ãw
+ 
+	`SŒšgBufãr
+ ();
+
+37 
+this
+.
+¶ay”Sts
+ = 
+Ãw
+ 
+	`PÏy”Sts
+ ();
+
+38 
+	}
+}
+
+40 
+public
+ 
+SŒšg
+
+
+41 
+	$g‘Name
+ ()
+
+43  
+Çme
+;
+
+44 
+	}
+}
+
+46 
+public
+ 
+
+47 
+	$£tName
+ (
+SŒšg
+ 
+Çme
+)
+
+49 
+this
+.
+Çme
+ =‚ame;
+
+50 
+	}
+}
+
+52 
+public
+ 
+SŒšg
+
+
+53 
+	$g‘W—pÚ
+ ()
+
+55  
+w—pÚ
+;
+
+56 
+	}
+}
+
+58 
+public
+ 
+
+59 
+	$£tW—pÚ
+ (
+SŒšg
+ 
+w—pÚ
+)
+
+61 
+this
+.
+w—pÚ
+ = weapon;
+
+62 
+	}
+}
+
+64 
+public
+ 
+
+65 
+	$g‘H™Pošts
+ ()
+
+67  
+h™Pošts
+;
+
+68 
+	}
+}
+
+70 
+public
+ 
+
+71 
+	$£tH™Pošts
+ (
+h™Pošts
+)
+
+73 
+this
+.
+h™Pošts
+ = hitPoints;
+
+74 
+	}
+}
+
+76 
+public
+ 
+
+77 
+	$g‘SŒ’gth
+ ()
+
+79  
+¡»ngth
+;
+
+80 
+	}
+}
+
+82 
+public
+ 
+
+83 
+	$£tSŒ’gth
+ (
+¡»ngth
+)
+
+85 
+this
+.
+¡»ngth
+ = strength;
+
+86 
+	}
+}
+
+88 @
+Ov”ride
+
+
+89 
+public
+ 
+SŒšg
+
+
+90 
+	$toSŒšg
+ ()
+
+92  "PÏy”{Çme=\'" + 
+this
+.
+Çme
+ + "', h™Pošts=" +his.
+h™Pošts
+
+
+93 + ", sŒ’gth=" + 
+this
+.
+¡»ngth
+ + ", w—pÚ=\'" +his.
+w—pÚ
+ + "\'"
+
+94 + ", Cª bkËd? " + 
+PÏy”
+.
+MORTAL
+
+
+95 + "}\nPÏy” Hi¡Üy:" + 
+this
+.
+	`g‘PÏy”Hi¡Üy
+ ();
+
+96 
+	}
+}
+
+98 
+public
+ 
+fš®
+ 
+
+99 
+	$klPÏy”
+ ()
+
+101 
+this
+.
+h™Pošts
+ = 0;
+
+102 
+Sy¡em
+.
+out
+.
+	`´šn
+ ("Player killed");
+
+103 
+	}
+}
+
+105 
+public
+ 
+
+106 
+	$addToPÏy”Hi¡Üy
+ (
+SŒšg
+ 
+ev’t
+)
+
+108 
+this
+.
+¶ay”Hi¡Üy
+.
+	`­³nd
+ (
+ev’t
+).append ("\n");
+
+109 
+	}
+}
+
+111 
+public
+ 
+SŒšg
+
+
+112 
+	$g‘PÏy”Hi¡Üy
+ ()
+
+114  
+¶ay”Hi¡Üy
+.
+	`toSŒšg
+ ();
+
+115 
+	}
+}
+
+117 
+public
+ cÏs 
+	cPÏy”D‘as
+
+
+119 
+´iv©e
+ 
+	gxp
+;
+
+121 
+PÏy”D‘as
+ (
+xp
+è{ 
+	gthis
+.
+	gxp
+ = xp; }
+
+123 @
+Ov”ride
+
+
+124 
+public
+ 
+SŒšg
+
+
+125 
+toSŒšg
+ ()
+
+127  "PÏy” D‘as: XP = " + 
+	gthis
+.
+	gxp
+;
+
+131 
+public
+ şas 
+	cPÏy”Sts
+
+
+133 
+´iv©e
+ 
+	ggamesPÏyed
+;
+
+134 
+´iv©e
+ 
+	gviùÜ›s
+;
+
+136 
+public
+ 
+PÏy”Sts
+ ()
+
+138 
+	gthis
+.
+	ggamesPÏyed
+ = 0;
+
+139 
+	gthis
+.
+	gviùÜ›s
+ = 0;
+
+142 
+public
+ 
+
+143 
+upd©ePÏy”Sts
+ (... 
+¡©s
+)
+
+145 ià(
+	g¡©s
+.
+	gËngth
+ == 2)
+
+147 
+this
+.
+gamesPÏyed
+ = 
+¡©s
+[0];
+
+148 
+	gthis
+.
+	gviùÜ›s
+ = 
+¡©s
+[1];
+
+150 ià(
+	g¡©s
+.
+	gËngth
+ == 0)
+
+152 
+this
+.
+gamesPÏyed
+++;
+
+153 
+	gthis
+.
+	gviùÜ›s
+++;
+
+157 @
+Ov”ride
+
+
+158 
+public
+ 
+SŒšg
+
+
+159 
+toSŒšg
+ ()
+
+161  "PÏy” Sts: Game PÏyed = " + 
+	gthis
+.
+	ggamesPÏyed
+
+
+162 + ", TÙ® ViùÜ› ğ" + 
+	gthis
+.
+	gviùÜ›s
+;
+
+166 
+public
+ 
+PÏy”Sts
+
+
+167 
+	$g‘PÏy”Sts
+ ()
+
+169  
+this
+.
+¶ay”Sts
+;
+
+170 
+	}
+}
+
+	@Spell.java
+
+1 
+public
+ cÏs 
+	cS³Î
+ 
+ex‹nds
+ 
+	mMagic
+
+
+3 
+´Ùeùed
+ 
+SŒšg
+ 
+	mÇme
+;
+
+4 
+´Ùeùed
+ 
+	mËv–
+;
+
+6 
+	$S³Î
+ ()
+
+8 
+	`su³r
+ ();
+
+9 
+this
+.
+Çme
+ = "Basiø" +his.
+affš™y
+ + " magic spell";
+
+10 
+this
+.
+Ëv–
+ = 1;
+
+12 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+8
+92
+Boss.java
+Hero.java
+ISaveable.java
+Magic.java
+Main.java
+Monster.java
+Player.java
+Spell.java

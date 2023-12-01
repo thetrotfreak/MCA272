@@ -1,6 +1,8 @@
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Player
+public class Player implements ISaveable, IInventory, IHealable, IBagpack
 {
   private String name;
   private String weapon;
@@ -9,6 +11,7 @@ public class Player
   private final static boolean MORTAL = true;
   private StringBuffer playerHistory;
   private PlayerStats playerStats;
+  private ArrayList<String> inventory;
 
   public Player ()
   {
@@ -16,6 +19,7 @@ public class Player
     this.strength = 100;
     this.playerHistory = new StringBuffer ();
     this.playerStats = new PlayerStats ();
+    this.inventory = new ArrayList<String> ();
   }
 
   public Player (String name, int hitPoints, int strength)
@@ -26,6 +30,7 @@ public class Player
     this.weapon = "Bare hands";
     this.playerHistory = new StringBuffer ();
     this.playerStats = new PlayerStats ();
+    this.inventory = new ArrayList<String> ();
   }
 
   public Player (String name, int hitPoints, int strength, String weapon)
@@ -37,6 +42,7 @@ public class Player
     this.weapon = weapon;
     this.playerHistory = new StringBuffer ();
     this.playerStats = new PlayerStats ();
+    this.inventory = new ArrayList<String> ();
   }
 
   public String
@@ -114,6 +120,93 @@ public class Player
   getPlayerHistory ()
   {
     return playerHistory.toString ();
+  }
+
+  @Override
+  public void
+  read (List<String> list)
+  {
+    /*
+     * TODO
+     * FileIO / Serialization
+     * */
+    if (list != null && list.size () > 0)
+      {
+        this.name = list.get (0);
+        this.weapon = list.get (1);
+        this.hitPoints = Integer.parseInt (list.get (2));
+        this.strength = Integer.parseInt (list.get (3));
+      }
+  }
+
+  @Override
+  public List<String>
+  write ()
+  {
+    /*
+     * TODO
+     * FileIO
+     * */
+    ArrayList<String> details = new ArrayList<String> ();
+    details.add (this.name);
+    details.add (this.weapon);
+    details.add (Integer.toString (this.hitPoints));
+    details.add (Integer.toString (this.strength));
+    return details;
+  }
+
+  @Override
+  public void
+  addItem (String item)
+  {
+    this.inventory.add (item);
+  }
+
+  @Override
+  public void
+  removeItem (String item)
+  {
+    this.inventory.remove (item);
+  }
+
+  @Override
+  public ArrayList<String>
+  getInventory ()
+  {
+    return this.inventory;
+  }
+
+  @Override
+  public void
+  heal (int amount)
+  {
+    int newHitPoints = this.hitPoints + amount;
+    if (amount <= 0 || newHitPoints >= 100)
+      {
+        return;
+      }
+    this.hitPoints = newHitPoints;
+  }
+
+  @Override
+  public boolean
+  canHeal ()
+  {
+    return true;
+  }
+
+  public int
+  getBagCapacity ()
+  {
+    return 100;
+  }
+
+  public void
+  emptyBag ()
+  {
+    this.inventory = new ArrayList<String> ();
+    System.out.println ("Bag emptied!");
+    return;
   }
 
   public class PlayerDetails
