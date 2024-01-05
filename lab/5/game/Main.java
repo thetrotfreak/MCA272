@@ -12,7 +12,7 @@ public class Main
 
     for (int i = 0; i < 5; i++)
       {
-        players[i] = new Player ();
+        players[i] = new Player (Integer.toString (i), 100, 100);
         Thread p = new Thread (players[i]);
         p.setPriority (Thread.MAX_PRIORITY);
         p.start ();
@@ -23,6 +23,10 @@ public class Main
          * but only one's damage will be dealt at a time
          */
         players[i].dealDamage (50);
+      }
+    for (Player player : players)
+      {
+        System.out.println (player);
       }
   }
 }
