@@ -1,0 +1,149 @@
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+// Model
+class Employee {
+    private int id;
+    private String name;
+    private String position;
+
+    public Employee(int id, String name, String position) {
+        this.id = id;
+        this.name = name;
+        this.position = position;
+    }
+
+    // Getters and setters go here...
+
+    @Override
+    public String toString() {
+        return "Employee{id=" + id + ", name='" + name + "', position='" + position + "'}";
+    }
+}
+
+// View
+class EmployeeView extends JFrame {
+    private DefaultListModel<String> employeeListModel;
+    private JList<String> employeeList;
+
+    public EmployeeView() {
+        setTitle("Employee Management");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        employeeListModel = new DefaultListModel<>();
+        employeeList = new JList<>(employeeListModel);
+
+        JScrollPane scrollPane = new JScrollPane(employeeList);
+        add(scrollPane, BorderLayout.CENTER);
+
+        JPanel buttonPanel = new JPanel();
+        JButton addButton = new JButton("Add Employee");
+        JButton updateButton = new JButton("Update Employee");
+        JButton deleteButton = new JButton("Delete Employee");
+
+        addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeDialog employeeDialog = new EmployeeDialog(EmployeeView.this, null);
+                employeeDialog.setVisible(true);
+            }
+        });
+
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int selectedIndex = employeeList.getSelectedIndex();
+                if (selectedIndex != -1) {
+                    Employee selectedEmployee = getEmployeeAtIndex(selectedIndex);
+                    EmployeeDialog employeeDialog = new EmployeeDialog(EmployeeView.this, selectedEmployee);
+                    employeeDialog.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(EmployeeView.this, "Select an employee to update.");
+                }
+            }
+        });
+
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int selectedIndex = employeeList.getSelectedIndex();
+                if (selectedIndex != -1) {
+                    Employee selectedEmployee = getEmployeeAtIndex(selectedIndex);
+                    int option = JOptionPane.showConfirmDialog(EmployeeView.this,
+                            "Are you sure you want to delete " + selectedEmployee.getName() + "?",
+                            "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+                    if (option == JOptionPane.YES_OPTION) {
+                        // Perform delete operation
+                        deleteEmployee(selectedEmployee);
+                        refreshEmployeeList();
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(EmployeeView.this, "Select an employee to delete.");
+                }
+            }
+        });
+
+        buttonPanel.add(addButton);
+        buttonPanel.add(updateButton);
+        buttonPanel.add(deleteButton);
+
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
+
+    public void refreshEmployeeList() {
+        employeeListModel.clear();
+        List<Employee> employees = getAllEmployees();
+        for (Employee employee : employees) {
+            employeeListModel.addElement(employee.toString());
+        }
+    }
+
+    private Employee getEmployeeAtIndex(int index) {
+        // Retrieve the selected employee from the list
+        // You may need to parse the String and convert it back to Employee
+        // For simplicity, assuming the toString() format is consistent
+        String employeeString = employeeListModel.getElementAt(index);
+        String[] parts = employeeString.split(",");
+        int id = Integer.parseInt(parts[0].substring(parts[0].indexOf('=') + 1));
+        String name = parts[1].substring(parts[1].indexOf('=') + 1).trim();
+        String position = parts[2].substring(parts[2].indexOf('=') + 1).replace("}", "").trim();
+        return new Employee(id, name, position);
+    }
+
+    private List<Employee> getAllEmployees() {
+        // Retrieve all employees from the database
+        // Implement your JDBC logic here
+        List<Employee> employees = new ArrayList<>();
+        // Dummy data, replace with actual JDBC logic
+        employees.add(new Employee(1, "John Doe", "Developer"));
+        employees.add(new Employee(2, "Jane Smith", "Manager"));
+        return employees;
+    }
+
+    private void deleteEmployee(Employee employee) {
+        // Implement delete logic here
+        // You may need to use JDBC to delete the employee from the database
+        // Dummy logic for demonstration
+        System.out.println("Deleted: " + employee);
+    }
+}
+
+// Controller
+class EmployeeDialog extends JDialog {
+    private JTextField nameField;
+    private JTextField positionField;
+    private EmployeeView parentView;
+    private Employee employee;
+
+    public EmployeeDialog(EmployeeView parentView, Employee employee) {
+        super(parentView, "Employee Details", true);
+        this.parentView = parentView;
+       
+
